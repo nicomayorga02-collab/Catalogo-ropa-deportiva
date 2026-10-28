@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siempre Wow | Catálogo Deportivo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Encabezado / Branding -->
+  <header class="header">
+    <div class="logo-container">
+      <div class="logo-badge">SW</div>
+      <h1 class="store-name">SIEMPRE WOW</h1>
+    </div>
+    <p class="subtitle">PROMOCIONES DE LA SEMANA</p>
+  </header>
+
+  <!-- Filtros de Búsqueda -->
+  <section class="controls-container">
+    <div class="search-box">
+      <i data-lucide="search"></i>
+      <input type="text" id="searchInput" placeholder="Buscar productos..." />
+    </div>
+    <div class="category-pills" id="categoryContainer">
+      <button class="pill active" data-cat="todos">Todos</button>
+      <button class="pill" data-cat="chaquetas">Chaquetas</button>
+      <button class="pill" data-cat="enterizos">Enterizos</button>
+      <button class="pill" data-cat="leggins">Leggins</button>
+      <button class="pill" data-cat="conjuntos">Conjuntos</button>
+      <button class="pill" data-cat="vestidos">Vestidos</button>
+    </div>
+  </section>
+
+  <!-- Grilla de Productos -->
+  <main class="products-grid" id="productsGrid"></main>
+
+  <!-- Modal Detalle del Producto -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-card">
+      <button class="close-btn" id="closeModal">&times;</button>
+      
+      <div class="modal-image-container">
+        <img id="modalImg" src="" alt="Producto" />
+      </div>
+
+      <div class="modal-info">
+        <span class="category-tag" id="modalCategory">CATEGORÍA</span>
+        <h2 id="modalTitle">Nombre del Producto</h2>
+        <div class="price-badge" id="modalPrice">$0.00</div>
+
+        <!-- Selección de Colores -->
+        <div class="option-group">
+          <label>Color Seleccionado:</label>
+          <div class="color-options" id="colorContainer"></div>
+        </div>
+
+        <!-- Selección de Talla -->
+        <div class="option-group">
+          <label>Talla:</label>
+          <div class="size-options" id="sizeContainer">
+            <button class="size-btn">S</button>
+            <button class="size-btn active">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+          </div>
+        </div>
+
+        <!-- Botón Pedido WhatsApp -->
+        <button class="whatsapp-btn" id="wsBtn">
+          <i data-lucide="message-circle"></i>
+          Pedir por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
